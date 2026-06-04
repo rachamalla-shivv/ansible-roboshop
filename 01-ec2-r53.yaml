@@ -8,6 +8,7 @@
     domain: "shivv-aws.fun"
     instances:
     - mongodb
+    - redis
     
   tasks:
   - name: create ec2-instance
