@@ -6,10 +6,10 @@
     sg_id: sg-07dcbad23f5972a86 
     zone_id: "Z01771181AKUPZX8DM2VP"
     domain: "shivv-aws.fun"
-    instances:
-    - mongodb
-    - redis
-    - mysql
+    # instances:
+    # - mongodb
+    # - redis
+    # - mysql
     
   tasks:
   - name: create ec2-instance
