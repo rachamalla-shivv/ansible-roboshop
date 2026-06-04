@@ -37,8 +37,8 @@
   - name: create route53 record
     amazon.aws.route53:
       state: present
-      zone: "{{ domain_name }}"
-      record: "{{ item.item }}.{{ domain_name }}" # mongodb.daws86s.fun
+      zone: "{{ domain }}"
+      record: "{{ item.item }}.{{ domain }}" # mongodb.daws86s.fun
       type: A
       ttl: 1
       value: "{{ item.instances[0].private_ip_address }}"
@@ -49,8 +49,8 @@
   - name: create route53 record for frontend
     amazon.aws.route53:
       state: present
-      zone: "{{ domain_name }}"
-      record: "{{ domain_name }}" # daws86s.fun
+      zone: "{{ domain }}"
+      record: "{{ domain }}" # daws86s.fun
       type: A
       ttl: 1
       value: "{{ item.instances[0].public_ip_address }}"
