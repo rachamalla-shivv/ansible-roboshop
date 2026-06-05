@@ -6,9 +6,9 @@
     ansible.builtin.dnf:
       name: "{{ item }}"
       state: present
-      loop:
-      - maven
-      - mysql
+    loop:
+    - maven
+    - mysql
 
   - name: install mysql python libraries
     ansible.builtin.pip:
