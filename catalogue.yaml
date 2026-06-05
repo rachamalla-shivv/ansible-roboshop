@@ -35,7 +35,7 @@
     ansible.builtin.file:
       path: /tmp/catalogue.zip
       state: absent
-      
+
   - name: download catalogue application
     ansible.builtin.get_url:
       url: https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip 
@@ -67,7 +67,7 @@
       state: present
 
   - name: connnect to mongodb catalogue
-    ansible.builtin.command: mongosh mongodb.daws86s.fun --quiet --eval "db.getMongo().getDBNames().indexOf('catalogue')"
+    ansible.builtin.command: mongosh mongodb.shivv-aws.fun --quiet --eval "db.getMongo().getDBNames().indexOf('catalogue')"
     register: catalogue_output
 
   # - name: evaluate cataalogue database
@@ -81,7 +81,7 @@
   #     msg: "{{ catalogue_output }}"
 
   - name: load products into mongodb
-    ansible.builtin.shell: mongosh --host mongodb.daws86s.fun </app/db/master-data.js
+    ansible.builtin.shell: mongosh --host mongodb.shivv-aws.fun </app/db/master-data.js
     when: catalogue_output.stdout | int < 0
 
   # - name: start and enable cataalogue
