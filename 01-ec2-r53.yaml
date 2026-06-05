@@ -6,9 +6,9 @@
     sg_id: sg-07dcbad23f5972a86 
     zone_id: "Z01771181AKUPZX8DM2VP"
     domain: "shivv-aws.fun"
-    instances:
-    - catalogue
-    - user
+    # instances:
+    # - catalogue
+    # - user
     
   tasks:
   - name: create ec2-instance
